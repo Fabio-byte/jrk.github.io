@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Documento HTML con SVG esterni</title>
+        <style>
+            /* Stili per l'SVG su schermi piccoli */
+            @media (max-width: 639px) {
+                #svg-piccolo {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            /* Stili per l'SVG su schermi grandi */
+            @media (min-width: 640px) {
+                #svg-grande {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            /* Stili di centratura testuale */
+            .text-center {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Altri contenuti... -->
+
+        <!-- Utilizza le classi responsive per mostrare l'SVG appropriato -->
+        <div class="text-center">
+            <div class="sm:hidden">
+                <object id="svg-piccolo"
+                        data="percorso_al_tuo_file_piccolo.svg"
+                        type="image/svg+xml"></object>
+            </div>
+            <div class="hidden sm:block">
+                <object id="svg-grande"
+                        data="percorso_al_tuo_file_grande.svg"
+                        type="image/svg+xml"></object>
+            </div>
+        </div>
+
+        <!-- Altri contenuti... -->
+    </body>
+</html>
